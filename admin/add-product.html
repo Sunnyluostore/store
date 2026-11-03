@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product - Sunnyluo Store</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { display: flex; min-height: 100vh; }
+        .sidebar { width: 240px; background: #222; color: white; padding: 20px 0; }
+        .sidebar h2 { padding: 0 20px; margin-bottom: 30px; color: #FF6A00; }
+        .sidebar ul { list-style: none; }
+        .sidebar ul li { padding: 15px 20px; cursor: pointer; }
+        .sidebar ul li:hover { background: #333; }
+        .sidebar ul li.active { background: #03a9f4; }
+        .main { flex: 1; background: #f5f5f5; padding: 20px; }
+        .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .form-container { background: white; padding: 30px; border-radius: 8px; max-width: 800px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: #333; font-weight: bold; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+        .form-group textarea { height: 150px; }
+        .upload-area { border: 2px dashed #ddd; padding: 40px; text-align: center; border-radius: 8px; cursor: pointer; color: #666; }
+        .btn { padding: 14px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        .btn-primary { background: #03a9f4; color: white; }
+        .btn-secondary { background: #eee; color: #333; margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li onclick="window.location.href='dashboard.html'">Dashboard</li>
+            <li class="active" onclick="window.location.href='products.html'">Products Management</li>
+            <li>Inquiries</li>
+            <li>Customers</li>
+            <li>Orders</li>
+            <li>Marketing Emails</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="header">
+            <h1>Add New Product</h1>
+        </div>
+        <div class="form-container">
+            <div class="form-group">
+                <label>Product Name</label>
+                <input type="text" placeholder="Enter product name">
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <select>
+                    <option>Select Category</option>
+                    <option>Promotional Gifts</option>
+                    <option>Home Decor</option>
+                    <option>Keychains</option>
+                </select>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="form-group">
+                    <label>Price From (US$)</label>
+                    <input type="number" placeholder="e.g. 0.50">
+                </div>
+                <div class="form-group">
+                    <label>Price To (US$)</label>
+                    <input type="number" placeholder="e.g. 1.20">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>MOQ (Minimum Order Quantity)</label>
+                <input type="number" placeholder="e.g. 200">
+            </div>
+            <div class="form-group">
+                <label>Product Images</label>
+                <div class="upload-area">
+                    Click or drag images here to upload
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Product Description</label>
+                <textarea placeholder="Enter product details, features, specifications..."></textarea>
+            </div>
+            <div style="margin-top: 30px;">
+                <button class="btn btn-secondary" onclick="window.location.href='products.html'">Cancel</button>
+                <button class="btn btn-primary" onclick="alert('Product saved!')">Publish Product</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

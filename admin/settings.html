@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Sunnyluo Store</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { display: flex; min-height: 100vh; }
+        .sidebar { width: 240px; background: #222; color: white; padding: 20px 0; }
+        .sidebar h2 { padding: 0 20px; margin-bottom: 30px; color: #FF6A00; }
+        .sidebar ul { list-style: none; }
+        .sidebar ul li { padding: 15px 20px; cursor: pointer; }
+        .sidebar ul li:hover { background: #333; }
+        .sidebar ul li.active { background: #03a9f4; }
+        .main { flex: 1; background: #f5f5f5; padding: 20px; }
+        .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .form-container { background: white; padding: 30px; border-radius: 8px; max-width: 800px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: #333; font-weight: bold; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+        .btn { padding: 14px 30px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; background: #03a9f4; color: white; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li onclick="window.location.href='dashboard.html'">Dashboard</li>
+            <li onclick="window.location.href='products.html'">Products Management</li>
+            <li onclick="window.location.href='inquiries.html'">Inquiries</li>
+            <li onclick="window.location.href='customers.html'">Customers</li>
+            <li onclick="window.location.href='orders.html'">Orders</li>
+            <li onclick="window.location.href='marketing.html'">Marketing Emails</li>
+            <li class="active">Settings</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="header">
+            <h1>Website Settings</h1>
+        </div>
+        <div class="form-container">
+            <div class="form-group">
+                <label>Website Name</label>
+                <input type="text" value="Sunnyluo Store">
+            </div>
+            <div class="form-group">
+                <label>Contact Email</label>
+                <input type="email" value="sunnyluo330@gmail.com">
+            </div>
+            <div class="form-group">
+                <label>WhatsApp Number</label>
+                <input type="text" value="+86 123 4567 8901">
+            </div>
+            <div class="form-group">
+                <label>Company Address</label>
+                <input type="text" value="Yiwu, Zhejiang, China">
+            </div>
+            <button class="btn" onclick="alert('Settings saved!')">Save Settings</button>
+        </div>
+    </div>
+</body>
+</html>
